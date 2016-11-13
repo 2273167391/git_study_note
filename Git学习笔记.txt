@@ -49,3 +49,16 @@
 	这个时候就会把本地的文件删除，在删除后，突然又想要回这个文件，因为这个文件在版本库中还存在的，使用如下命令可以重新拖回来：
 	git checkout -- lis.txt
 	如果确定了该文件不再需要了，那么就先删除，再使用git commit提交删除的说明就可以了，不过这个时候就真的从版本库中删除了。
+12、使用Git Bash生成ssh key,命令如下：
+	ssh-keygen -t rsa -C "libiao@chinasie.com"
+	生成的ssh-key表示这个电脑与远程仓库通信的身份，生成的ssh-key在github中设置，然后通过命令：
+	ssh -T git@github.com测试是否成功，如果看到自己的用户名，则表示成功
+13、如果本地没有仓库，则可以将远程仓库克隆到本地，在需要将远程仓库克隆到本地的对应磁盘使用Git Bash打开，使用克隆命令将远程仓库克隆到本地，如下：
+	git clone git@github.com:2273167391/git_study_note.git
+	如果本地已经有仓库了，只是想与远程仓库关联上，使用如下命令：
+	git remote add origin git@github.com:2273167391/git_study_note.git
+	然后将本地仓库文件同步到远程仓库，如下：
+	git push -u origin master，如果使用这个命令出错，则使用下面这个命令：
+	git puch -f
+	如果需要删除关联，则使用如下：
+	git remote rm origin
