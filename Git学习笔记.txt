@@ -73,6 +73,9 @@
 	将本地创建的分支同步到远程仓库中：
 	git push origin dev
 	如果某个分支不想要了，需要从远程仓库删除，如下：
-	git puch origin :dev
+	git push origin :dev
 	删除本地分支：
 	git branch -d dev
+15、将dev分支的内容合并到master上，如果当前分支还在dev上，则使用git checkout master切换到master分支，然后使用git merge dev合并分支。这个时候只是将本地分支合并了，
+	远程仓库还未合并，接下来需要使用git push -f同步到远程仓库。
+	
