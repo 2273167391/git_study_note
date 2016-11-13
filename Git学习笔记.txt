@@ -78,4 +78,9 @@
 	git branch -d dev
 15、将dev分支的内容合并到master上，如果当前分支还在dev上，则使用git checkout master切换到master分支，然后使用git merge dev合并分支。这个时候只是将本地分支合并了，
 	远程仓库还未合并，接下来需要使用git push -f同步到远程仓库。
+16、分支管理策略：
+	合并分支时默认使用Fast forward模式，这种模式下，在删除分支时，分支信息也会跟着丢失，如果需要删除分支时，以后想看到被删除的分支信息，则需要禁用掉Fast forward模式，
+	禁用掉Fast forward模式会创建一个新的commit，使用如下命令：
+		git merge --no-ff -m "提交说明" dev
+	因为使用--no-ff的方式合并分支需要创建一个新的commit，则需要-m参数，将commit描述带上。
 	
