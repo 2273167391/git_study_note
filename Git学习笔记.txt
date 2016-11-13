@@ -62,3 +62,17 @@
 	git puch -f
 	如果需要删除关联，则使用如下：
 	git remote rm origin
+14、新增一个dev分支，下面说说创建并切换分支：
+	git checkout -b dev
+	-b的意思就是创建并切换分支，这个命令就等于：
+	git branch dev
+	git checkout dev
+	这两个命令的合并
+	如果想看自己当前在那个分支上面干活，则使用git branch命令查看
+	如果需要切换到master分支上，使用git checkout master就可以了
+	将本地创建的分支同步到远程仓库中：
+	git push origin dev
+	如果某个分支不想要了，需要从远程仓库删除，如下：
+	git puch origin :dev
+	删除本地分支：
+	git branch -d dev
