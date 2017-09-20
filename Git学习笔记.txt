@@ -1,4 +1,4 @@
-1、在Window安装GIT很简单，到官网中下载安装包，一路next就行。
+﻿1、在Window安装GIT很简单，到官网中下载安装包，一路next就行。
 2、安装完成后设置Git提交代码的用户及邮箱，命令如下：
 	git config --global user.name "你的用户名"
 	git config --global user.email "你的邮箱"
@@ -82,5 +82,5 @@
 	合并分支时默认使用Fast forward模式，这种模式下，在删除分支时，分支信息也会跟着丢失，如果需要删除分支时，以后想看到被删除的分支信息，则需要禁用掉Fast forward模式，
 	禁用掉Fast forward模式会创建一个新的commit，使用如下命令：
 		git merge --no-ff -m "提交说明" dev
-	因为使用--no-ff的方式合并分支需要创建一个新的commit，则需要-m参数，将commit描述带上。
+	因为使用--no-ff的方式合并分支需要创建一个新的commit，则需要-m参数，将commit描述带上。 
 	
